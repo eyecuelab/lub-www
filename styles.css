@@ -105,9 +105,11 @@ div {
   padding: 0px 80px 0px 0px;
 }
 
-.footer .content-left p {
+.footer .content-left p, .footer .content-left a {
   padding: 0px 0px 0px 40px;
   white-space: pre;
+  text-decoration: none;
+  color: black;
 }
 
 .black-mask {
@@ -193,6 +195,29 @@ div {
   height: 50px;
   padding: 0px 0px 0px 100px;
 }
+@media (max-width: 1250px) {
+  .footer.row {
+    flex-direction: column;
+    padding: 10px;
+    height: 200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer.row .content-left,.footer.row .content-right{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #footer-cloud {
+    padding: 0px;
+  }
+}
 
 @media (max-width: 800px) {
   .row {
@@ -233,7 +258,6 @@ div {
 
   .footer .content-left p {
     padding: 0px 0px 0px 0px;
-    white-space: pre;
   }
 
   #footer-cloud {
