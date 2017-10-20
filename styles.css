@@ -22,6 +22,15 @@ div {
   width: auto;
   display: flex;
   flex-direction: row;
+  overflow: hidden;
+}
+
+.footer.row {
+  height: 80px;
+}
+
+.footer .content-left, .footer .content-right {
+  align-items: center;
 }
 
 .content-left, .content-right {
@@ -90,6 +99,47 @@ div {
   height: 50px;
 }
 
+.footer .content-right {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 80px 0px 0px;
+}
+
+.footer .content-left p {
+  padding: 0px 0px 0px 40px;
+  white-space: pre;
+}
+
+.black-mask {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100% );
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vw;
+}
+
+.yellow-mask {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to left, rgba(253,210,0,1) 0%, rgba(253,210,0,1) 48%, rgba(253,210,0,0) 50%, rgba(253,210,0,0) 100% );
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+}
+
+.light-yellow-mask {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to left, rgba(255, 213, 42,1) 0%, rgba(255, 213, 42,1) 40%, rgba(255, 213, 42,0) 50%, rgba(255, 213, 42,0) 100% );
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+}
+
 #map-background {
   position: absolute;
   top: 0;
@@ -126,10 +176,100 @@ div {
 
 #phone-detail-2 {
   position: absolute;
-  right: 0px;
+  right: -100px;
 
 }
 
 #people-like-you-text {
   padding: 200px 100px;
+}
+
+#everyone-is-different {
+  padding: 200px 100px;
+
+}
+
+#footer-cloud {
+  height: 50px;
+  padding: 0px 0px 0px 100px;
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .content-left.main-text-box {
+      padding: 80px;
+      align-items: center;
+  }
+
+  .content-right.main-text-box {
+      padding: 80px;
+      align-items: center;
+  }
+
+  .row {
+    max-height: none;
+    width: 100%;
+    min-height: 1000px;
+  }
+
+  .main-image {
+    width: auto;
+  }
+
+  .content-left, .content-right {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #people-like-you-text {
+    padding: 80px;
+    align-items: center;
+  }
+
+  .footer .content-left p {
+    padding: 0px 0px 0px 0px;
+    white-space: pre;
+  }
+
+  #footer-cloud {
+    padding: 10px;
+  }
+
+  .app-store-box {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer.row {
+    height: auto;
+  }
+
+  .footer .content-right {
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer .content-left, .footer .content-right, .footer .content-right .app-store-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #map-and-network {
+  }
+
+
+  #phone-detail {
+    position: relative;
+    height: auto;
+  }
+
+  .black-mask, .yellow-mask, .light-yellow-mask {
+    display: none;
+  }
 }
