@@ -1,13 +1,13 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: lub-www
+  name: lub-web
   annotations:
     ingress.kubernetes.io/ssl-redirect: "true"
     certmanager.k8s.io/cluster-issuer: letsencrypt
 spec:
   rules:
-  - host: staging.lub.life
+  - host: lub.life
     http:
       paths:
       - backend:
