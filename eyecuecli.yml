@@ -1,0 +1,16 @@
+commonName: lub
+envs:
+  production:
+    googleProject: lub-prod
+    cluster: lub-staging
+apps:
+  - name: web
+    build:
+      docker:
+        context: ./
+        before:
+          workingDir: ./deploy/configs
+          run: cp nginx.conf ../../
+        after:
+          workingDir: .
+          run: rm nginx.conf
